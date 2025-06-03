@@ -2,3 +2,5 @@
 2. Build package step in build_package is missing the command to build the package
 3. There is no setup.py file for Python packaging, though a pyproject.toml is present.
 4. Missing fields in pyproject.toml
+5. Fix write permission required for OIDC authentication in release_package.yml
+6. Add CloudSmith authentication in realease_package.yml
