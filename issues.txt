@@ -1,0 +1,4 @@
+1. Update typo for realease_package.yml in README.md
+2. Build package step in build_package is missing the command to build the package
+3. There is no setup.py file for Python packaging, though a pyproject.toml is present.
+4. Missing fields in pyproject.toml
