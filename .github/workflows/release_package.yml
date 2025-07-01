@@ -16,6 +16,8 @@ env:
 permissions:
   contents: read
   actions: read
+  id-token: write
+  
 
 jobs:
   publish:
@@ -31,8 +33,12 @@ jobs:
           repository: ${{ github.repository }}
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
-
-
+     
+      - name: Authenticate to Cloudsmith
+        uses: cloudsmith-io/cloudsmith-cli-action@v1.0.1
+        with:
+          oidc-namespace: ${{ secrets.CLOUDSMITH_NAMESPACE }}
+          oidc-service-slug: ${{ secrets.CLOUDSMITH_SERVICE_SLUG }} 
 
       - name: List directory contents
         run: ls -la dist/
