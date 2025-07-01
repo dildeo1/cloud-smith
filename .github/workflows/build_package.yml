@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       artifact_name: python-package
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -33,7 +33,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install build
 
+      - name: Clean dist directory
+        run: rm -rf dist
+
       - name: Build package
+        run: python -m build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
