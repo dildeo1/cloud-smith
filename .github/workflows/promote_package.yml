@@ -17,7 +17,7 @@ env:
   CLOUDSMITH_STAGING_REPO: 'staging'
   CLOUDSMITH_PRODUCTION_REPO: 'production'
   CLOUDSMITH_SERVICE_SLUG: ${{ vars.CLOUDSMITH_SERVICE_SLUG }}
-  PACKAGE_NAME: 'dilip-project'
+  PACKAGE_NAME: 'dilip_project'
 
 permissions:
   id-token: write
