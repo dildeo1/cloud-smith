@@ -19,4 +19,4 @@ classifiers = [
 ] 
 
 [tool.hatch.build.targets.wheel]
-packages = ["dilip-project"]
+packages = ["dilip_project"]
